@@ -1,0 +1,14 @@
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\bin\Debug\net9.0\ControleEstoque.exe
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\bin\Debug\net9.0\ControleEstoque.deps.json
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\bin\Debug\net9.0\ControleEstoque.runtimeconfig.json
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\bin\Debug\net9.0\ControleEstoque.dll
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\bin\Debug\net9.0\ControleEstoque.pdb
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.AssemblyInfo.cs
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.dll
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\refint\ControleEstoque.dll
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.pdb
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.genruntimeconfig.cache
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ref\ControleEstoque.dll
