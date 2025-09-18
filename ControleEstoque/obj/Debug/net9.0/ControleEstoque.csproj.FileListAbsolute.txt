@@ -12,3 +12,4 @@ C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\refin
 C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.pdb
 C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.genruntimeconfig.cache
 C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ref\ControleEstoque.dll
+C:\Users\hp\Documents\dev\controleEstoque\ControleEstoque\obj\Debug\net9.0\ControleEstoque.sourcelink.json
