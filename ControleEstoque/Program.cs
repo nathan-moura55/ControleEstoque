@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using ControleEstoque.models;
+using Estoque.Dominio.Models;
 using ControleEstoque.services;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Estoque estoque = new Estoque();
+        ControleDeEstoque estoque = new ControleDeEstoque();
 
         estoque.AdicionarProduto(new Produto(1, "Caneta azul", 20, 10));
         estoque.AdicionarProduto(new Produto(2, "Lápis", 25, 12));

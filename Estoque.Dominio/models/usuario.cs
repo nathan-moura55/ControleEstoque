@@ -1,4 +1,4 @@
-namespace ControleEstoque.models
+namespace Estoque.Dominio.Models
 {
     public class Usuario
     {

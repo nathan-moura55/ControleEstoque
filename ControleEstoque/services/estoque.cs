@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ControleEstoque.models;
+using Estoque.Dominio.Models;
 
 
 namespace ControleEstoque.services
 {
-    public class Estoque
+    public class ControleDeEstoque
     {
         private List<Produto> produtos = new List<Produto>();
 
