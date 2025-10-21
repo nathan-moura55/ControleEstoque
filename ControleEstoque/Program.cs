@@ -8,14 +8,17 @@ class Program
     static void Main(string[] args)
     {
         ControleDeEstoque estoque = new ControleDeEstoque();
+        Historico historico = new Historico();
 
         estoque.AdicionarProduto(new Produto(1, "Caneta azul", 20, 10));
         estoque.AdicionarProduto(new Produto(2, "Lápis", 25, 12));
         estoque.AdicionarProduto(new Produto(3, "Borracha", 10, 5));
 
+        historico.Registrar("Produtos iniciais cadastrados.");
+
         List<Usuario> usuarios = new List<Usuario>
         {
-            new Usuario(1, "Lucas", "Gerente"),
+            new Usuario(1, "Pedro", "Gerente"),
             new Usuario(2, "João", "Ajudante de Estoque")
         };
 
@@ -71,6 +74,7 @@ class Program
                             Console.WriteLine("1 - Listar Produtos");
                             Console.WriteLine("2 - Entrada de Estoque");
                             Console.WriteLine("3 - Saída de Estoque");
+                            Console.WriteLine("4 - Historico de alterações");
                             Console.WriteLine("0 - Trocar usuário");
                             Console.Write("Escolha: ");
 
@@ -103,6 +107,8 @@ class Program
                                     }
 
                                     estoque.EntradaEstoque(idEntrada, qtdEntrada);
+                                    Console.WriteLine("");
+                                    historico.Registrar($"Entrada de {qtdEntrada} unidades no produto ID {idEntrada}.");
                                     break;
 
                                 case 3:
@@ -123,6 +129,7 @@ class Program
                                     try
                                     {
                                         estoque.SaidaEstoque(idSaida, qtdSaida);
+                                        historico.Registrar($"Saída de {qtdSaida} unidades do produto ID {idSaida}.");
                                     }
                                     catch (Exception ex)
                                     {
@@ -132,6 +139,10 @@ class Program
 
                                 case 0:
                                     Console.WriteLine("Logout realizado com sucesso.");
+                                    break;
+                                
+                                case 4:
+                                    historico.ListarHistorico();
                                     break;
 
                                 default:
