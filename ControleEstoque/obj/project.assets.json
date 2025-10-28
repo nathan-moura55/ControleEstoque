@@ -14,6 +14,19 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Estoque.Servicos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Estoque.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Estoque.Servicos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Estoque.Servicos.dll": {}
+        }
       }
     }
   },
@@ -22,11 +35,17 @@
       "type": "project",
       "path": "../Estoque.Dominio/Estoque.Dominio.csproj",
       "msbuildProject": "../Estoque.Dominio/Estoque.Dominio.csproj"
+    },
+    "Estoque.Servicos/1.0.0": {
+      "type": "project",
+      "path": "../Estoque.Servicos/Estoque.Servicos.csproj",
+      "msbuildProject": "../Estoque.Servicos/Estoque.Servicos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Estoque.Dominio >= 1.0.0"
+      "Estoque.Dominio >= 1.0.0",
+      "Estoque.Servicos >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -56,6 +75,9 @@
           "projectReferences": {
             "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj"
             }
           }
         }

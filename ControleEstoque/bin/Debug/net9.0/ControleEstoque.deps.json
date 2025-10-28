@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "ControleEstoque/1.0.0": {
         "dependencies": {
-          "Estoque.Dominio": "1.0.0"
+          "Estoque.Dominio": "1.0.0",
+          "Estoque.Servicos": "1.0.0"
         },
         "runtime": {
           "ControleEstoque.dll": {}
@@ -17,6 +18,17 @@
       "Estoque.Dominio/1.0.0": {
         "runtime": {
           "Estoque.Dominio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Estoque.Servicos/1.0.0": {
+        "dependencies": {
+          "Estoque.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "Estoque.Servicos.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -31,6 +43,11 @@
       "sha512": ""
     },
     "Estoque.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Estoque.Servicos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

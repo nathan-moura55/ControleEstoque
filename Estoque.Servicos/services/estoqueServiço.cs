@@ -4,7 +4,7 @@ using System.Linq;
 using Estoque.Dominio.Models;
 
 
-namespace ControleEstoque.services
+namespace Estoque.Serviços
 {
     public class ControleDeEstoque
     {

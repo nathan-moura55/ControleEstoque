@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Estoque.Dominio.Models;
-using ControleEstoque.services;
+using Estoque.Serviços;
 
 class Program
 {
