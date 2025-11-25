@@ -15,11 +15,25 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Estoque.Servicos/1.0.0": {
+      "Estoque.Repositorio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Estoque.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Estoque.Repositorio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Estoque.Repositorio.dll": {}
+        }
+      },
+      "Estoque.Servicos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Estoque.Dominio": "1.0.0",
+          "Estoque.Repositorio": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Estoque.Servicos.dll": {}
@@ -36,6 +50,11 @@
       "path": "../Estoque.Dominio/Estoque.Dominio.csproj",
       "msbuildProject": "../Estoque.Dominio/Estoque.Dominio.csproj"
     },
+    "Estoque.Repositorio/1.0.0": {
+      "type": "project",
+      "path": "../Estoque.Repositorio/Estoque.Repositorio.csproj",
+      "msbuildProject": "../Estoque.Repositorio/Estoque.Repositorio.csproj"
+    },
     "Estoque.Servicos/1.0.0": {
       "type": "project",
       "path": "../Estoque.Servicos/Estoque.Servicos.csproj",
@@ -45,6 +64,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Estoque.Dominio >= 1.0.0",
+      "Estoque.Repositorio >= 1.0.0",
       "Estoque.Servicos >= 1.0.0"
     ]
   },
@@ -75,6 +95,9 @@
           "projectReferences": {
             "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj"
+            },
+            "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj"
             },
             "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj": {
               "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj"
@@ -113,7 +136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

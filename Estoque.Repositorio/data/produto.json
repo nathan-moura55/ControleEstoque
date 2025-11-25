@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Caneta azul",
+    "Quantidade": 65,
+    "EstoqueMinimo": 10
+  },
+  {
+    "Id": 2,
+    "Nome": "L\u00E1pis",
+    "Quantidade": 100,
+    "EstoqueMinimo": 12
+  },
+  {
+    "Id": 3,
+    "Nome": "Borracha",
+    "Quantidade": 40,
+    "EstoqueMinimo": 5
+  }
+]

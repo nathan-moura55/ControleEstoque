@@ -2,12 +2,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Estoque.Dominio\Estoque.Dominio.csproj" />
+    <ProjectReference Include="..\Estoque.Repositorio\Estoque.Repositorio.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
 </Project>

@@ -15,27 +15,21 @@ namespace Estoque.Dominio.Models
             EstoqueMinimo = estoqueMinimo;
         }
 
-        public void AdicionarEstoque(int qtd)
-        {
-            Quantidade += qtd;
-        }
+        public void AdicionarEstoque(int qtd) => Quantidade += qtd;
 
         public void RemoverEstoque(int qtd)
         {
             if (qtd > Quantidade)
                 throw new InvalidOperationException("Estoque insuficiente.");
-
             Quantidade -= qtd;
         }
 
-        public bool AbaixoDoMinimo()
-        {
-            return Quantidade < EstoqueMinimo;
-        }
+        public void AtualizarNome(string novoNome) => Nome = novoNome;
+        public void AtualizarEstoqueMinimo(int novoMinimo) => EstoqueMinimo = novoMinimo;
 
-        public override string ToString()
-        {
-            return $"ID: {Id} | NOME: {Nome} | QUANTIDADE: {Quantidade} | MÍNIMO: {EstoqueMinimo}";
-        }
+        public bool AbaixoDoMinimo() => Quantidade < EstoqueMinimo;
+
+        public override string ToString() =>
+            $"ID: {Id} | NOME: {Nome} | QUANTIDADE: {Quantidade} | MÍNIMO: {EstoqueMinimo}";
     }
 }

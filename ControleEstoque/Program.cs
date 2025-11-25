@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using Estoque.Dominio.Models;
-using Estoque.Serviços;
+﻿using Estoque.Dominio.Models;
+using Estoque.Repositorio;
+using Estoque.Servicos;
 
 class Program
 {
     static void Main(string[] args)
     {
-        ControleDeEstoque estoque = new ControleDeEstoque();
-        Historico historico = new Historico();
+        var repositorio = new ProdutoRepositorioJson();
+        var estoque = new ControleDeEstoque(repositorio);
+        var historico = new Historico();
 
         estoque.AdicionarProduto(new Produto(1, "Caneta azul", 20, 10));
         estoque.AdicionarProduto(new Produto(2, "Lápis", 25, 12));
@@ -46,9 +46,7 @@ class Program
                     Console.WriteLine("===== Selecione um usuário =====\n");
 
                     foreach (var usuario in usuarios)
-                    {
                         Console.WriteLine($"{usuario.Id} - {usuario.Nome} ({usuario.Cargo})");
-                    }
 
                     Console.Write("\nDigite o ID do usuário: ");
                     if (!int.TryParse(Console.ReadLine(), out int idUsuario))
@@ -74,7 +72,7 @@ class Program
                             Console.WriteLine("1 - Listar Produtos");
                             Console.WriteLine("2 - Entrada de Estoque");
                             Console.WriteLine("3 - Saída de Estoque");
-                            Console.WriteLine("4 - Historico de alterações");
+                            Console.WriteLine("4 - Histórico de alterações");
                             Console.WriteLine("0 - Trocar usuário");
                             Console.Write("Escolha: ");
 
@@ -107,7 +105,6 @@ class Program
                                     }
 
                                     estoque.EntradaEstoque(idEntrada, qtdEntrada);
-                                    Console.WriteLine("");
                                     historico.Registrar($"Entrada de {qtdEntrada} unidades no produto ID {idEntrada}.");
                                     break;
 
@@ -137,12 +134,12 @@ class Program
                                     }
                                     break;
 
-                                case 0:
-                                    Console.WriteLine("Logout realizado com sucesso.");
-                                    break;
-                                
                                 case 4:
                                     historico.ListarHistorico();
+                                    break;
+
+                                case 0:
+                                    Console.WriteLine("Logout realizado com sucesso.");
                                     break;
 
                                 default:

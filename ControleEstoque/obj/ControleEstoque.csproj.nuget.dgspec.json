@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\controleEstoque\\ControleEstoque.csproj": {}
+    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\ControleEstoque\\ControleEstoque.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\controleEstoque\\ControleEstoque.csproj": {
+    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\ControleEstoque\\ControleEstoque.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\controleEstoque\\ControleEstoque.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\ControleEstoque\\ControleEstoque.csproj",
         "projectName": "ControleEstoque",
-        "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\controleEstoque\\ControleEstoque.csproj",
+        "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\ControleEstoque\\ControleEstoque.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\controleEstoque\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\ControleEstoque\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -28,6 +28,9 @@
             "projectReferences": {
               "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj": {
                 "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj"
+              },
+              "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj"
               },
               "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj": {
                 "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj"
@@ -66,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -128,18 +131,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj": {
+    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj",
-        "projectName": "Estoque.Servicos",
-        "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj",
+        "projectName": "Estoque.Repositorio",
+        "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\obj\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -191,7 +194,73 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj",
+        "projectName": "Estoque.Servicos",
+        "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\Estoque.Servicos.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Servicos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Dominio\\Estoque.Dominio.csproj"
+              },
+              "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj": {
+                "projectPath": "C:\\Users\\hp\\Documents\\dev\\controleEstoque\\Estoque.Repositorio\\Estoque.Repositorio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

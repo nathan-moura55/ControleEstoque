@@ -9,6 +9,7 @@
       "ControleEstoque/1.0.0": {
         "dependencies": {
           "Estoque.Dominio": "1.0.0",
+          "Estoque.Repositorio": "1.0.0",
           "Estoque.Servicos": "1.0.0"
         },
         "runtime": {
@@ -23,9 +24,21 @@
           }
         }
       },
-      "Estoque.Servicos/1.0.0": {
+      "Estoque.Repositorio/1.0.0": {
         "dependencies": {
           "Estoque.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "Estoque.Repositorio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Estoque.Servicos/1.0.0": {
+        "dependencies": {
+          "Estoque.Dominio": "1.0.0",
+          "Estoque.Repositorio": "1.0.0"
         },
         "runtime": {
           "Estoque.Servicos.dll": {
@@ -43,6 +56,11 @@
       "sha512": ""
     },
     "Estoque.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Estoque.Repositorio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

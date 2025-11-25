@@ -1,23 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Estoque.Dominio.Models;
+using Estoque.Dominio.Interfaces;
 
-
-namespace Estoque.Serviços
+namespace Estoque.Servicos
 {
     public class ControleDeEstoque
     {
-        private List<Produto> produtos = new List<Produto>();
+        private readonly IProdutoRepositorio _repositorio;
+
+        public ControleDeEstoque(IProdutoRepositorio repositorio)
+        {
+            _repositorio = repositorio;
+        }
 
         public void AdicionarProduto(Produto produto)
         {
-            produtos.Add(produto);
+            _repositorio.Adicionar(produto);
         }
 
         public Produto BuscarProduto(int id)
         {
-            return produtos.FirstOrDefault(p => p.Id == id);
+            return _repositorio.ObterPorId(id)!;
         }
 
         public void EntradaEstoque(int id, int quantidade)
@@ -26,10 +28,7 @@ namespace Estoque.Serviços
             if (produto != null)
             {
                 produto.AdicionarEstoque(quantidade);
-            }
-            else
-            {
-                Console.WriteLine("Produto não encontrado.");
+                _repositorio.Atualizar(produto);
             }
         }
 
@@ -43,16 +42,13 @@ namespace Estoque.Serviços
                 {
                     Console.WriteLine($"[ALERTA] Produto '{produto.Nome}' está abaixo do estoque mínimo.");
                 }
-            }
-            else
-            {
-                Console.WriteLine("Produto não encontrado.");
+                _repositorio.Atualizar(produto);
             }
         }
 
         public void ListarProdutos()
         {
-            foreach (var produto in produtos)
+            foreach (var produto in _repositorio.ObterTodos())
             {
                 Console.WriteLine(produto);
             }
