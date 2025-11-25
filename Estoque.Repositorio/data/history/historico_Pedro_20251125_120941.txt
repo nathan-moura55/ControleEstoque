@@ -1,0 +1,4 @@
+[25/11/2025 12:08:45] Produtos iniciais cadastrados.
+[25/11/2025 12:09:04] Entrada de 20 unidades no produto ID 1.
+[25/11/2025 12:09:19] Saída de 27 unidades do produto ID 1.
+[25/11/2025 12:09:36] Saída de 100 unidades do produto ID 1.

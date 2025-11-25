@@ -139,6 +139,7 @@ class Program
                                     break;
 
                                 case 0:
+                                    historico.SalvarEmArquivo(usuarioSelecionado.Nome);
                                     Console.WriteLine("Logout realizado com sucesso.");
                                     break;
 

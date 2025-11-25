@@ -2,19 +2,19 @@
   {
     "Id": 1,
     "Nome": "Caneta azul",
-    "Quantidade": 65,
+    "Quantidade": 61,
     "EstoqueMinimo": 10
   },
   {
     "Id": 2,
     "Nome": "L\u00E1pis",
-    "Quantidade": 100,
+    "Quantidade": 200,
     "EstoqueMinimo": 12
   },
   {
     "Id": 3,
     "Nome": "Borracha",
-    "Quantidade": 40,
+    "Quantidade": 80,
     "EstoqueMinimo": 5
   }
 ]
