@@ -14,7 +14,7 @@
   {
     "Id": 1,
     "Nome": "Caneta azul",
-    "Quantidade": 40,
+    "Quantidade": 38,
     "EstoqueMinimo": 10
   },
   {
@@ -26,7 +26,7 @@
   {
     "Id": 5,
     "Nome": "Cola ",
-    "Quantidade": 70,
+    "Quantidade": 75,
     "EstoqueMinimo": 30
   }
 ]
