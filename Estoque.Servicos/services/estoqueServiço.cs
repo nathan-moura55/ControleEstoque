@@ -46,6 +46,19 @@ namespace Estoque.Servicos
             }
         }
 
+        public void RemoverProduto(int id)
+        {
+            var produto = _repositorio.ObterPorId(id);
+
+            if (produto == null)
+                throw new Exception("Produto não encontrado.");
+
+            if (produto.Quantidade > 0)
+                throw new Exception("Não é possível excluir um produto com estoque.");
+
+            _repositorio.Remover(id);
+        }
+        
         public void ListarProdutos()
         {
             foreach (var produto in _repositorio.ObterTodos())

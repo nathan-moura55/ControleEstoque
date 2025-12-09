@@ -9,12 +9,19 @@ namespace Estoque.Repositorio
 {
     public class ProdutoRepositorioJson : IProdutoRepositorio
     {
-        private readonly string arquivo = "C:/Users/hp/Documents/dev/controleEstoque/Estoque.Repositorio/data/produto.json";
+        private readonly string arquivo = 
+            "C:/Users/hp/Documents/dev/controleEstoque/Estoque.Repositorio/data/produto.json";
+
         private List<Produto> produtos = new List<Produto>();
 
         public ProdutoRepositorioJson()
         {
-            if (File.Exists(arquivo))
+            if (!File.Exists(arquivo))
+            {
+                produtos = new List<Produto>();
+                Salvar();
+            }
+            else
             {
                 var json = File.ReadAllText(arquivo);
                 produtos = JsonSerializer.Deserialize<List<Produto>>(json) ?? new List<Produto>();
@@ -23,7 +30,11 @@ namespace Estoque.Repositorio
 
         private void Salvar()
         {
-            var json = JsonSerializer.Serialize(produtos, new JsonSerializerOptions { WriteIndented = true });
+            var json = JsonSerializer.Serialize(produtos, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+
             File.WriteAllText(arquivo, json);
         }
 
