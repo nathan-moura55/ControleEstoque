@@ -81,8 +81,8 @@ class Program
                             Console.WriteLine("1 - Listar Produtos");
                             Console.WriteLine("2 - Entrada de Estoque");
                             Console.WriteLine("3 - Saída de Estoque");
-                            Console.WriteLine("4 - Remover produto");
-                            Console.WriteLine("5 - Histórico de alterações");
+                            Console.WriteLine("5 - Gerenciar produto");
+                            Console.WriteLine("6 - Histórico de alterações");
                             Console.WriteLine("0 - Trocar usuário");
                             Console.Write("Escolha: ");
 
@@ -144,27 +144,77 @@ class Program
                                     }
                                     break;
 
-                                case 4:
-                                    Console.Write("ID do Produto que deseja remover: ");
-                                    if (!int.TryParse(Console.ReadLine(), out int idRemover))
+                                case 5:
+                                    int opcaoGerenciar = -1;
+                                    while (opcaoGerenciar != 0)
                                     {
-                                        Console.WriteLine("ID inválido.");
-                                        break;
-                                    }
+                                        Console.Clear();
+                                        Console.WriteLine("===== Gerenciar Produtos =====");
+                                        Console.WriteLine("1 - Cadastrar Produto");
+                                        Console.WriteLine("2 - Remover Produto");
+                                        Console.WriteLine("0 - Voltar");
+                                        Console.Write("Escolha: ");
 
-                                    try
-                                    {
-                                        estoque.RemoverProduto(idRemover);
-                                        historico.Registrar($"Produto ID {idRemover} removido do estoque.");
-                                        Console.WriteLine("Produto removido com sucesso!");
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        Console.WriteLine($"Não foi possível remover o produto: {ex.Message}");
+                                        if (!int.TryParse(Console.ReadLine(), out opcaoGerenciar))
+                                        {
+                                            Console.WriteLine("Opção inválida.");
+                                            Console.ReadKey();
+                                            continue;
+                                        }
+
+                                        switch (opcaoGerenciar)
+                                        {
+                                            case 1:
+                                                Console.Write("ID do Produto: ");
+                                                int id = int.Parse(Console.ReadLine()!);
+                                                Console.Write("Nome do Produto: ");
+                                                string nome = Console.ReadLine()!;
+                                                Console.Write("Quantidade: ");
+                                                int qtd = int.Parse(Console.ReadLine()!);
+                                                Console.Write("Estoque mínimo: ");
+                                                int min = int.Parse(Console.ReadLine()!);
+
+                                                try
+                                                {
+                                                    estoque.AdicionarProduto(new Produto(id, nome, qtd, min));
+                                                    historico.Registrar($"Produto cadastrado: {nome} (ID {id})");
+                                                    Console.WriteLine("Produto cadastrado com sucesso!");
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    Console.WriteLine($"Erro: {ex.Message}");
+                                                }
+                                                Console.ReadKey();
+                                                break;
+
+                                            case 2:
+                                                Console.WriteLine("[AVISO] Para remover os produtos o estoque deve ser igual a zero.");
+                                                Console.Write("ID do Produto a remover: ");
+                                                int idRemover = int.Parse(Console.ReadLine()!);
+                                                try
+                                                {
+                                                    estoque.RemoverProduto(idRemover);
+                                                    historico.Registrar($"Produto removido: ID {idRemover}");
+                                                    Console.WriteLine("Produto removido com sucesso!");
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    Console.WriteLine($"Erro: {ex.Message}");
+                                                }
+                                                Console.ReadKey();
+                                                break;
+
+                                            case 0:
+                                                break;
+
+                                            default:
+                                                Console.WriteLine("Opção inválida.");
+                                                Console.ReadKey();
+                                                break;
+                                        }
                                     }
                                     break;
-
-                                case 5:
+                                case 6:
                                     historico.ListarHistorico();
                                     break;
 

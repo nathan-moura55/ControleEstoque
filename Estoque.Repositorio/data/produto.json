@@ -16,5 +16,17 @@
     "Nome": "Caneta azul",
     "Quantidade": 40,
     "EstoqueMinimo": 10
+  },
+  {
+    "Id": 4,
+    "Nome": "clipes de papel",
+    "Quantidade": 50,
+    "EstoqueMinimo": 20
+  },
+  {
+    "Id": 5,
+    "Nome": "Cola ",
+    "Quantidade": 70,
+    "EstoqueMinimo": 30
   }
 ]

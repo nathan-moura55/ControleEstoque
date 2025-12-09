@@ -14,6 +14,12 @@ namespace Estoque.Servicos
 
         public void AdicionarProduto(Produto produto)
         {
+            var existente = _repositorio.ObterTodos()
+                                        .FirstOrDefault(p => p.Id == produto.Id || p.Nome.Equals(produto.Nome, StringComparison.OrdinalIgnoreCase));
+
+            if (existente != null)
+                throw new Exception("Produto com mesmo ID ou nome já existe.");
+
             _repositorio.Adicionar(produto);
         }
 
@@ -58,7 +64,7 @@ namespace Estoque.Servicos
 
             _repositorio.Remover(id);
         }
-        
+
         public void ListarProdutos()
         {
             foreach (var produto in _repositorio.ObterTodos())
